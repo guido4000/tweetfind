@@ -20,6 +20,15 @@ font-size: 36px;
   color: orange;
 }
 
+#iField {
+  font-size: 20px;
+  height: 32px;
+}
+
+#submit {
+  font-size: 20px;
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
   margin: 20px 0;
