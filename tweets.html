@@ -1,0 +1,60 @@
+<head>
+  <title>tweets</title>
+</head>
+
+<body>
+  <div class="container-narrow">
+  {{> heading}}
+  {{> main}}
+  </div> <!-- /container -->
+</body>
+
+<template name="heading">
+
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+        <!-- <li class="active"><a href="#">Home</a></li> //-->
+        <li><a href="https://twitter.com/guidohoermann">@guidohoermann</a></li>
+        
+      </ul>
+      <h3 class="muted">Tweet Finder</h3>
+    </div>
+
+    <hr>
+
+    <div class="jumbotron">
+      <h2>Super awesome Tweet finder!</h2>
+      <p class="lead">Just enter the search term and get realtime updates</p>
+      <form class="form-search">
+        <input type="text" id="iField" class="input-medium search-query">
+        <button type="submit" id="submit" class="btn btn-success">Search</button>
+      </form>
+     <!--  <a class="btn btn-large btn-success" href="#">Run</a> -->
+    </div>
+
+    <hr>
+</template>
+  
+<template name="main">
+
+    <div class="row-fluid marketing">
+      <div class="span12 lead">
+        <h3 id="startResult">Results {{latestRefresh}} for <span id="red">{{search}}</span></h3>
+        <ul class="unstyled" >
+          {{#each tweets}}
+          <li class="header1">{{user}} {{{userlink}}} at {{stamp}}</li>
+          <li class="content1">{{{text}}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Guido Hoermann 2013</p>
+    </div>
+
+  
+
+</template>
