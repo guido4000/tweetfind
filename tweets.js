@@ -29,6 +29,7 @@ if (Meteor.isClient) {
     }
   });
   
+
   Template.main.greeting = function () {
     return "Welcome to tweets.";
   };
