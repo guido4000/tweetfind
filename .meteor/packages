@@ -7,3 +7,4 @@ autopublish
 preserve-inputs
 bootstrap
 http
+coffeescript
